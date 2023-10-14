@@ -4,7 +4,9 @@ import { Button } from 'antd'
 function Home() {
   return (
     <>
-      <div style={{ float: 'left', marginLeft: '16%', marginTop: '1%' }}>home</div>
+      <div style={{ float: 'left', marginLeft: '16%', marginTop: '1%' }}>
+        <div className=''></div>
+      </div>
     </>
   )
 }

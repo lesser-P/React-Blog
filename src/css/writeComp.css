@@ -1,0 +1,32 @@
+.writebody {
+  margin: 0 auto;
+  padding: 0;
+  width: 80vh;
+  height: 90vh;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.writeTitle {
+  font-family: 'Courier New', Courier, monospace;
+}
+.context {
+  height: 30vh;
+}
+.writeItem {
+  margin-bottom: 10px;
+  width: 90%;
+  height: 80%;
+}
+.write_sub {
+  width: 100px;
+}
+.custom-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -5,9 +5,10 @@ import Header_c from './components/Header'
 import Home from './pages/Home'
 import Project from './pages/Project'
 import Note from './pages/Note'
-import Write from './pages/Write'
 import SideBar from './components/SideBar'
+import Write from './pages/Write'
 import { Col, Layout, Row, Space } from 'antd'
+import SnakeGame from './components/SnakeGame'
 const { Header, Footer, Sider, Content } = Layout
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <SnakeGame></SnakeGame>
+      {/* <BrowserRouter>
         <Header_c></Header_c>
         <div className='context'>
           <Routes>
@@ -27,7 +29,7 @@ function App() {
           </Routes>
           <SideBar></SideBar>
         </div>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   )
 }

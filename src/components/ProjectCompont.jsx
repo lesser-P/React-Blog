@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../css/projectComp.css'
-import { IeOutlined, EllipsisOutlined, GithubOutlined } from '@ant-design/icons'
+import { IeOutlined, GithubOutlined } from '@ant-design/icons'
 import { Avatar, Card } from 'antd'
 const { Meta } = Card
 
@@ -51,6 +51,7 @@ const ProjectItem = () => {
   }
   return (
     <Card
+      onClick={handleWebClick}
       hoverable='true'
       className='project_card'
       cover={<img style={{ width: '90%', margin: '1px 1px' }} src='src/assets/fishNFT.png' />}
