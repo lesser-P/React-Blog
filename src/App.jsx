@@ -10,17 +10,20 @@ import Write from './pages/Write'
 import { Col, Layout, Row, Space } from 'antd'
 import SnakeGame from './components/SnakeGame'
 const { Header, Footer, Sider, Content } = Layout
+import MarkDown from './pages/MarkDown'
+import WagimDemo from './pages/WagimDemo'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <SnakeGame></SnakeGame>
+      <WagimDemo></WagimDemo>
       {/* <BrowserRouter>
         <Header_c></Header_c>
         <div className='context'>
           <Routes>
+            <Route path='/markdown' element={<MarkDown />}></Route>
             <Route path='/home' element={<Home />}></Route>
             <Route path='/project' element={<Project />}></Route>
             <Route path='/note' element={<Note />}></Route>

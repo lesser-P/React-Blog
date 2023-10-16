@@ -1,7 +1,7 @@
 import { Col, Menu, Row, Button, Popover } from 'antd'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { BankOutlined, RedditOutlined, RocketOutlined, EditOutlined, BookOutlined } from '@ant-design/icons'
+import { BankOutlined, RocketOutlined, EditOutlined, BookOutlined } from '@ant-design/icons'
 import '../css/Header.css'
 import MenuItem from 'antd/es/menu/MenuItem'
 
@@ -49,13 +49,15 @@ function Header() {
           </Col>
           <Col span={1}></Col>
           <Col span={2}>
-            {state ? (
-              <Button onClick={handleOnClick} type='primary' size='large'>
-                Connect Wallet
-              </Button>
-            ) : (
-              <InfoButton handleOnClick={handleOnClick} />
-            )}
+            <div style={{ marginTop: '10px' }}>
+              {state ? (
+                <Button onClick={handleOnClick} type='primary' size='large'>
+                  Connect Wallet
+                </Button>
+              ) : (
+                <InfoButton handleOnClick={handleOnClick} />
+              )}
+            </div>
           </Col>
         </Row>
       </div>

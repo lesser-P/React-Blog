@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Card } from 'antd'
 import '../css/noteComp.css'
+import { Link } from 'react-router-dom'
 
 const list = [
   {
@@ -32,13 +33,15 @@ const list = [
 
 const NoteInfo = ({ item }) => {
   return (
-    <div className='context'>
-      <div className='noteItem'>
-        <Card hoverable='true' title={<h2>{item.title}</h2>} extra={<a href='#'>详情</a>} style={{ width: '100%' }}>
-          <p className='custom-text'>{item.cotntext}</p>
-        </Card>
+    <Link to='/markdown' style={{ textDecoration: 'none' }}>
+      <div className='context'>
+        <div className='noteItem'>
+          <Card hoverable='true' title={<h2>{item.title}</h2>} extra={<a href='#'>详情</a>} style={{ width: '100%' }}>
+            <p className='custom-text'>{item.cotntext}</p>
+          </Card>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

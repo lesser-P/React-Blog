@@ -329,7 +329,7 @@ function SnakeGame() {
   }, [])
 
   function incrementScore() {
-    setScore(score++)
+    setScore(++score)
   }
 
   function particleSplash() {
@@ -347,6 +347,7 @@ function SnakeGame() {
   function initialize() {
     CTX.imageSmoothingEnabled = false
     KEY.listen()
+    setFlage(false)
     cellsCount = cells * cells
     cellSize = W / cells
     snake = new Snake()
@@ -374,10 +375,14 @@ function SnakeGame() {
 
   function gameOver() {
     console.log(maxScore + 'ss' + score)
+    console.log('max', maxScore)
     maxScore ? null : (maxScore = score)
-    if (score > maxScore) {
+    console.log('score', score)
+    console.log('flage', flage)
+    if (score >= maxScore) {
       maxScore = score
       setFlage(true)
+      console.log('1111111')
     } else {
       setFlage(false)
     }
@@ -395,6 +400,7 @@ function SnakeGame() {
     dom_score.innerText = '00'
     score = '00'
     snake = new Snake()
+    setFlage(false)
     food.spawn()
     KEY.resetState()
     isGameOver = false
@@ -425,6 +431,7 @@ function SnakeGame() {
           <br />
           <span id='score'>{score}</span>
         </div>
+
         <button id='replay'>
           <i className='fas fa-play'></i>
           RESTART
