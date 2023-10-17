@@ -762,6 +762,7 @@ function SnakeGame() {
       <>
         <div className='tokenBtn'>
           <button
+            disabled={isLoading || isSuccess}
             id='mintBtn'
             onClick={() =>
               write({
