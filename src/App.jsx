@@ -21,6 +21,7 @@ import { publicProvider } from 'wagmi/providers/public'
 
 import { getDefaultWallets, RainbowKitProvider, midnightTheme } from '@rainbow-me/rainbowkit'
 import SendTransaction from './pages/SendTransaction'
+import Demo from './pages/Demo'
 
 // 配置想要wagmi使用的链以及想要使用的提供程序
 const { chains, publicClient, webSocketPublicClient } = configureChains(
